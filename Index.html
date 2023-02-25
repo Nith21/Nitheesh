@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinical Info</title>
+</head>
+<body>
+    
+    <h2 style="text-align: center; color: rgba(0, 0, 255, 0.834);">Body Health Checkup</h2>
+    <style>
+        body{
+            background-image: url(Medi.jpg);
+        }
+        p{
+            color:aqua;
+        }
+    </style>
+    <script>
+        
+        
+        
+        class GrandParent{
+            Details(){
+             var a=prompt("Enter your Name");
+             var b=prompt("Enter your Age");
+             document.write("Your Name:"+"\n"+a+"<br>");
+             document.write("Your Age:"+"\n"+b+"<br>"+"<br>");
+            }
+          
+            BP(){
+                var BPL=prompt("Enter you BP level");
+                if((BPL<=90) && (BPL>=70)){
+                document.write("Your BP Level is Low"+"<br>");
+                document.write("Extreme low blood pressure can lead to a condition known as shock"+"<br>");
+                document.write("If you have symptoms of extreme low blood pressure (hypotension) or shock, seek emergency medical help"+"<br>");
+                document.write("Kindly consult Doctor and take the Medicine fludrocortisone"+"<br>"+"<br>");
+            }
+            else if((BPL>=90) && (BPL<=120)){
+                document.write("Your BP Level is Normal"+"<br>");
+                document.write("Your Condition is Good"+"<br>"+"<br>");
+            }
+            else if((BPL>=120) && BPL<=140){
+                document.write("Your BP Level is Pre-Hypertension"+"<br>")
+                document.write("Kindly consult the Doctor and take Medicine lisinopril"+"<br>");
+                document.write("Take more fruits as much as possible"+"<br>"+"<br>");
+            }
+            else if((BPL>=140) && (BPL<=160)){
+                document.write("Your BP Level is 1st Stage of Hypertension"+"<br>");
+                document.write("Immediately Reach the Hospital nearby you"+"<br>");
+                document.write("Kindly take Acebutolol Tablet for now"+"<br>"+"<br>");
+            }
+            else if(BPL>160){
+                document.write("Your BP Level is very High"+"<br>");
+                document.write("If you leave this without care this may cause death. Kindly reach the Hospital nearby you"+"<br>"+"<br>")
+            }
+            }
+            Sugar(){
+                var SugarBF=prompt("Enter the Sugar Level Before Fasting");
+                if((SugarBF>70) && (SugarBF<90)){
+                    document.write("Your Sugar Level Before Food is Normal"+"<br>")
+                }
+                else if(SugarBF<70){
+                    document.write("Your Sugar Level Before Food is Low"+"<br>");
+                }
+                else if((SugarBF>90) && (SugarBF<=120)){
+                    document.write("Your Sugar Level Before Fasting is High"+"<br>");
+                }
+                else if(SugarBF>120){
+                    document.write("Your Sugar Level Before Fasting is Very High"+"<br>");
+                }
+                var SugarAF=prompt("Enter our Sugar Level After Fasting");
+                if((SugarAF>121) && (SugarAF<140)){
+                    document.write("Your Sugar Level After Food is Normal"+"<br>");
+                }
+                else if(SugarAF<120){
+                    document.write("Your Sugar Level After Food is Low"+"<br>");
+                }
+                else if ((SugarAF>141) && (SugarAF<=160)){
+                    document.write("Your Sugar Level After Food is High"+"<br>");
+                }
+                else if(SugarAF>161){
+                    document.write("Your Sugar Level After Food is Very High"+"<br>");
+                }
+
+                if(((SugarBF>70) && (SugarBF<90)) && ((SugarAF>121) && (SugarAF<140))){
+                    var a="Result: Your Sugar Level is Normal";
+                    document.write(a+"<br>"+"<br>");
+
+                }
+                else if((SugarBF<70) && (SugarAF<120)){
+                    var b ="Result: Your Sugar Level is Low.";
+                    document.write(b+"\n"+"This term is called as Hypoglycemia.");
+                    document.write("Kindly take foods like fish, plant-based proteins. And"+"\n");
+                    document.write("Consult the Doctor and take Medicine Glucagon."+"<br>"+"<br>");
+                }
+                else if(((SugarBF>90) && (SugarBF<=120)) && ((SugarAF>141) && (SugarAF<=160))){
+                    var c ="Result: Your Sugar Level is High.";
+                    document.write(c+"\n"+"This term is called as Diabetes."+"\n");
+                    document.write("Kindly take foods like non-starchy vegetables, whole grains. And"+"\n");
+                    document.write("Consult the Doctor and take Medicine Humalog."+"<br>"+"<br>");
+                }
+                else if((SugarBF>120) && SugarAF>161){
+                    var d="Result: Your Sugar Level is Very High.";
+                    document.write(d+"\n"+"This term is called as Diabetes."+"\n");
+                    document.write("Kindly take foods like non-starchy vegetables, whole grains. And"+"\n");
+                    document.write("Consult the Doctor and take Medicine Humalog."+"<br>"+"<br>");
+                }
+            }
+            Haemoglobin(){
+                var gender=prompt("Enter Male or Female");
+                switch(gender){
+                    case "Male":{
+                        var HG=parseInt(prompt("Enter Your Haemoglobin Level"));
+                          if((HG>13.2) && (HG<16.6)){
+                            var e="Result: Your Haemoglobin Level is Normal";
+                            document.write(e+"<br>"+"<br>");
+                        }
+                        else if(HG>16.6){
+                            var f ="Result: Your Haemoglobin Level is High.";
+                            document.write(f+"<br>"+"This term is called as Polycythemia."+"\n");
+                            document.write("Kindly take foods like eggs, beef, dried beans, enriched whole-grain cereals. And"+"\n");
+                            document.write("Consult the Doctor and take Medicine Interferon Alfa-2b."+"<br>"+"<br>");
+                        }
+                        else if(HG<13.2){
+                            var g ="Result: Your Haemoglobin Level is Low.";
+                            document.write(g+"<br>"+"This term is called as Anemia."+"\n");
+                            document.write("Kindly take foods like eggs, beef, dried beans, enriched whole-grain cereals. And"+"\n");
+                            document.write("Consult the Doctor and take Medicine Vtamin B-12 and Folic Acid Supplements."+"<br>"+"<br>");
+
+                        
+                          }
+                        
+                    };
+                    break;
+                    case "Female":{
+                        var HG=parseInt(prompt("Enter Haemoglobin Level"));
+                        if((HG>11.6) && (HG<15)){
+                            var h="Result: Your Haemoglobin Level is Normal";
+                            document.write(h+"<br>"+"<br>");
+                        }
+                        else if(HG>15){
+                            var i ="Result: Your Haemoglobin Level is High.";
+                            document.write(i+"<br>"+"This term is called as Polycythemia."+"\n");
+                            document.write("Kindly take foods like eggs, beef, dried beans, enriched whole-grain cereals. And"+"\n");
+                            document.write("Consult the Doctor and take Medicine Interferon Alfa-2b."+"<br>"+"<br>");
+                        }
+                        else if(HG<11.6){
+                            var j ="Result: Your Haemoglobin Level is Low.";
+                            document.write(j+"<br>"+"This term is called as Anemia."+"\n");
+                            document.write("Kindly take foods like eggs, beef, dried beans, enriched whole-grain cereals. And"+"\n");
+                            document.write("Consult the Doctor and take Medicine Vtamin B-12 and Folic Acid Supplements."+"<br>"+"<br>");
+                          }
+
+                    };
+                    break;
+                    default: document.write("Enter Male or Female");
+                }
+            }
+            Salt(){
+                var SA=parseInt(prompt("Enter Your Salt Level"));
+                if((SA>135) && (SA<145)){
+                    var k ="Result: Your Salt Level is Normal.";
+                    document.write(k+"<br>"+"<br>");
+                }
+                else if(SA>145){
+                    var l ="Result: Your Salt Level is High.";
+                    document.write(l+"\n"+"This term is called as Hyponatremia."+"\n");
+                    document.write("Consult the Doctor and take Medicine Clofibrate and Choropromide."+"<br>"+"<br>");
+                }
+                else if (SA<135){
+                    var m ="Result: Your Salt Level is Low.";
+                    document.write(m+"\n"+"This term is called as Hyponatremia."+"\n");
+                    document.write("Consult the Doctor and take Medicine Clofibrate and Choropromide."+"<br>"+"<br>");
+
+
+                }
+
+            }
+            Cholestrol(){
+                var CH=parseInt(prompt("Enter Your Cholestrol Level"));
+                if((CH>200) && (CH<239)){
+                    var n ="Result: Your Cholestrol Level is Normal.";
+                    document.write(n+"<br>"+"<br>");
+
+                }
+                else if(CH>239){
+                    var o ="Result: Your Cholestrol Level is High.";
+                    document.write(o+"\n"+"This term is called as Hyponatremia."+"\n");
+                    document.write("Consult the Doctor and take Medicine Lipitor and Repetha."+"<br>"+"<br>");
+
+                }
+                else if(CH<200){
+                    var p ="Result: Your Cholestrol Level is Low.";
+                    document.write(p+"\n"+"This term is called as Hyponatremia."+"\n");
+                    document.write("Consult the Doctor and take Medicine Lipitor and Repetha."+"<br>"+"<br>");
+
+                }
+            }
+           
+              
+
+            
+
+        }
+        class Parent extends GrandParent{
+            BMICalculation(){
+                var weight=parseInt(prompt("Enter Your Weight"));
+                document.write("Your Weight is "+weight+"<br>");
+                var height=parseInt(prompt("Enter Your Height"));
+                document.write("Your height is "+height+"<br>");
+                var BMI=((weight)/(height*height));
+                if(BMI<18.5){
+                    document.write("Result: You are within the Underweight Range"+"<br>");
+                }
+                else if((BMI>18.5) && (BMI<24.9)){
+                    document.write("Result: You are within the Healthy Weight Range"+"<br>");
+                }
+                else if((BMI>25) && (BMI<29.9)){
+                    document.write("Result: You are within the OverWeight Range"+"<br>");
+
+                }
+                else if(BMI>30){
+                    
+                    document.write("<p>Result:</p> You are within the Obese Range"+"<br>");
+                    
+
+                }
+            }
+
+        }
+        const GP=new Parent();
+        GP.Details();
+        GP.BP();
+        GP.Sugar();
+        GP.Haemoglobin();
+        GP.BMICalculation();
+        GP.Cholestrol();
+
+        
+        
+    </script>
+    <div ></div>
+</body>
+</html>
